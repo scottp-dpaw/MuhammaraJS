@@ -11,7 +11,7 @@
     "node": ">=11"
   },
   "scripts": {
-    "install": "node-pre-gyp install --fallback-to-build ${EXTRA_NODE_PRE_GYP_FLAGS:-\"\"}",
+    "install": "node-pre-gyp install --build-from-source ${EXTRA_NODE_PRE_GYP_FLAGS:-\"\"}",
     "test": "mocha -R tap ./tests/*.js --timeout 15000",
     "test:codestyle": "npx prettier -c ./",
     "test:electron": "electron-mocha -R tap ./tests/*.js --timeout 15000",
